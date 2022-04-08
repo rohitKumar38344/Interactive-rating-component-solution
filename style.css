@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: inherit;
+}
+
+.card {
+  width: 40rem;
+  height: 40rem;
+  background-color: hsl(213, 19%, 18%);
+  padding: 3.2rem;
+  border-radius: 2.4rem;
+}
+
+.icon-container {
+  background-color: hsl(216, 12%, 8%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.6rem;
+}
+
+.card-description {
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+
+.feedback {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 1.6rem;
+  row-gap: 3.2rem;
+}
+
+.container {
+  display: inline-flex;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.radio__input,
+.radio__input--custom,
+.test {
+  width: 50px;
+  height: 50px;
+}
+
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  z-index: 999999;
+}
+
+.test {
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.5;
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(216, 12%, 8%);
+  font-size: 2rem;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 99999; */
+}
+
+.radio__input--custom {
+  border-radius: 50%;
+}
+
+.radio__input--custom::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.radio__input:checked + .radio__input--custom::after {
+  transform: scale(1);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 3.2rem;
+  padding: 1.2rem 2.4rem;
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  grid-row: 2 / -1;
+  grid-column: 1 / 7;
+}
+
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+/******** Thankyou section *********/
+.thankyou {
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  align-items: center;
+  /* margin-left: 5px; */
+}
+
+.hidden {
+  display: none;
+}
+
+.thankyou img {
+  width: 20rem;
+  /* height: 25rem; */
+}
+
+.status {
+  font-size: 2rem;
+  text-align: center;
+  width: 25rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.6rem;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213deg 14% 16%);
+}
+
+.thankyou-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.thankyou-description {
+  color: hsl(216, 12%, 54%);
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(216, 12%, 54%);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
